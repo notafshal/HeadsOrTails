@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Heads or Tails</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./styles/index.css" rel="stylesheet" />
+  </head>
+  <body>
+    <center><h1>Heads or Tails</h1></center>
+    <div id="username_div">
+      <form onsubmit="username_submit(event)">
+        <label style="padding: 5px">Enter your username: </label><br />
+        <input type="text" id="username" placeholder="Your username" /><br />
+        <small style="color: #666"
+          >Username must be more than 5 character*</small
+        ><br />
+        <button
+          type="submit"
+          style="background-color: red; color: white; cursor: pointer"
+        >
+          Start Game
+        </button>
+      </form>
+    </div>
+    <div id="game_div" style="display: none">
+      Welcome <span id="user"><b>Choose your side</b></span>
+
+      <br />
+      <div class="side_chooser">
+        <b>Choose your side: </b><br />
+        <button class="head" onclick="start_game('head')">Head</button>
+
+        <button class="tail" onclick="start_game('tail')">Tail</button>
+      </div>
+      <div id="flipping" style="display: none">
+        Flipping the coin.......Please Wait...
+        <br />
+        <img src="./images/loading.gif" style="width: 30px" />
+      </div>
+      <div id="results" style="display: none; font-weight: bold">Result</div>
+    </div>
+
+    <script src="./js/index.js"></script>
+  </body>
+</html>
